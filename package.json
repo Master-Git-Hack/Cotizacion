@@ -2,7 +2,7 @@
   "name": "cotizacion",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://master-git-hack.github.io/Contizacion/",
+  "homepage":"https://master-git-hack.github.io/Cotizacion/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
