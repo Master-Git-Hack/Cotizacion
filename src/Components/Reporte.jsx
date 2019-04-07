@@ -22,7 +22,7 @@ class Reporte extends Component
     {
         let fecha = new Date(this.props.fecha);
         fecha.setDate(fecha.getDate() + 8)
-        const vigencia = fecha.getFullYear() +'-'+fecha.getMonth()+'-'+fecha.getDate();
+        const vigencia = fecha.getFullYear() +'-'+(fecha.getMonth()+1)+'-'+fecha.getDate();
         var subtotal=0;
         Object.keys(this.props.cotizacion).forEach(key => 
             //this.setState({subtotal:(this.state.subtotal + Number(this.props.cotizacion[key].precioTotal))})
