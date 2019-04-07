@@ -12,9 +12,9 @@ class Reporte extends Component
             vista:false,
             fecha_actual:this.props.fecha,
             vigencia:'',
-            subtotal:0,
-            total:0,
-            iva:0,
+            subtotal:0.00,
+            total:0.00,
+            iva:0.00,
             cotizacion:[this.props.cotizacion]
         }
     }
@@ -23,14 +23,13 @@ class Reporte extends Component
         let fecha = new Date(this.props.fecha);
         fecha.setDate(fecha.getDate() + 8)
         const vigencia = fecha.getFullYear() +'-'+(fecha.getMonth()+1)+'-'+fecha.getDate();
-        var subtotal=0;
+        var subtotal=0.00;
         Object.keys(this.props.cotizacion).forEach(key => 
-            //this.setState({subtotal:(this.state.subtotal + Number(this.props.cotizacion[key].precioTotal))})
-           subtotal+= Number(this.props.cotizacion[key].precioTotal)
+           subtotal=Number(parseFloat(subtotal).toFixed(2))  + parseFloat(this.props.cotizacion[key].precioTotal.toFixed(2))
             )
-        const iva = subtotal*0.16;
-        const total = subtotal+iva;
-        this.setState({vigencia,subtotal,iva,total});
+        var iva = parseFloat(subtotal*0.16).toFixed(2);
+        var total = Number(parseFloat(subtotal)+parseFloat(iva)).toFixed(2);
+        this.setState({vigencia,subtotal:subtotal.toFixed(2),iva,total});
     }
     render()
     {
@@ -77,14 +76,14 @@ class Reporte extends Component
                     <div className="row">
                         <div className="col-2">
                             <strong>
-                                ATN: 
+                                At´n: 
                             </strong>
                         </div>
                         <div className="col-6">{this.props.atiende}</div>
                     </div>
                     <br/>
                     <div className="row">
-                        <div className="col-2"><strong>Cotizo: </strong></div>
+                        <div className="col-2"><strong>Cotizó: </strong></div>
                         <div className="col-4">Tec. Arq. Juan Jesús Porras Gutiérrez</div>
                         <div className="col-2"><strong>Fecha: </strong></div>
                         <div className="col-4">{this.props.fecha}</div>
@@ -126,10 +125,10 @@ class Reporte extends Component
                                             <p className="card-text">{this.props.cotizacion[i].concepto}</p>
                                         </div>
                                         <div className="col-2">
-                                            <p className="card-text">{this.props.cotizacion[i].precio}</p>
+                                            <p className="card-text">$ {Number(this.props.cotizacion[i].precio).toFixed(2)}</p>
                                         </div>
                                         <div className="col-2">
-                                            <p className="card-title">{this.props.cotizacion[i].precioTotal}</p>
+                                            <p className="card-title">$ {Number(this.props.cotizacion[i].precioTotal).toFixed(2)}</p>
                                         </div>
                                     </div>
                                 );

@@ -68,7 +68,7 @@ class Formulario extends Component
                     <br/>
                     <div className="row">
                         <div className="col-1 text-right">
-                            <p className="text-primary">Atiende: </p>
+                            <p className="text-primary">Atiención: </p>
                         </div>
                         <div className="col-5">
                             <input type="text" onChange={this.handleChange} className="form-control" name="atiende" />
@@ -77,7 +77,7 @@ class Formulario extends Component
                             <p className="text-primary">Fecha: </p>
                         </div>
                         <div className="col-5">
-                            <input type="date" onChange={this.handleChange} className="form-control" name="fecha" />
+                            <input type="date" onChange={this.handleChange}  className="form-control" name="fecha" />
                         </div>
                     </div>
                     <br/>
