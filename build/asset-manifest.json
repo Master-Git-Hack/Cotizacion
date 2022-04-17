@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Cotizacion/static/css/main.836ab6bd.css",
+    "main.js": "/Cotizacion/static/js/main.5dbbb04d.js",
+    "static/media/logo.png": "/Cotizacion/static/media/logo.1aabaf98bf59b6edd7af.png",
+    "index.html": "/Cotizacion/index.html",
+    "main.836ab6bd.css.map": "/Cotizacion/static/css/main.836ab6bd.css.map",
+    "main.5dbbb04d.js.map": "/Cotizacion/static/js/main.5dbbb04d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.836ab6bd.css",
+    "static/js/main.5dbbb04d.js"
+  ]
+}
