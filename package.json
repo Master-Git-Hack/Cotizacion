@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "homepage":"https://master-git-hack.github.io/Cotizacion/",
+  "homepage":"https://serviciosprofesionalesporras.herokuapp.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
