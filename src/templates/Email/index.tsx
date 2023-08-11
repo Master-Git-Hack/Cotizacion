@@ -1,5 +1,6 @@
 /** @format */
 
-export default function Template() {
+export const Template = () => {
 	return <></>;
-}
+};
+export default Template;
